@@ -1,5 +1,5 @@
 require_relative '../models/cats'
-require_relative '..views/index'
+require_relative '../views/index'
 
 module Controller
     def index

@@ -4,7 +4,6 @@ require_relative 'models/cats'
 def dispatch(cmd)
     if ['1'].include? cmd
         puts 'Check in a kitty!'
-# ::Controller.check_in
 
     elsif ['2'].include? cmd
         puts 'Check out a kitty'
