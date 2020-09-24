@@ -1,9 +1,9 @@
-#T1A3 - Terminal Application
+# T1A3 - Terminal Application
 ##### Stephanie Vallance
 
-##Purrito
+## Purrito
 
-####Software Development Plan
+#### Software Development Plan
 
 My application, Purrito provides a way to manage and care for cats in a boarding facility.  
 
@@ -23,7 +23,7 @@ An animal attendant will use the application to check-in a cat as they arrive in
 During morning or evening meals, the attendant will select the menu option for showing meals and select the time of day. 
 A quick list will be generated for all cats currently checked in to boarding with each of their meals, requirements such as medications, and a flag if the cat is aggressive (their spicy rating). 
 
-####Features
+#### Features
 
 - Check-in new cat
 - Check-out cat in boarding
@@ -34,11 +34,11 @@ A quick list will be generated for all cats currently checked in to boarding wit
 *Describe each features with 100 words, must demonstrate understanding of loops, variables/scope & error handling*
 
 
-####Outline of user Interaction and Experience
+#### Outline of user Interaction and Experience
 
-####Flow Diagram
+#### Flow Diagram
 
-####Implementation Plan
+#### Implementation Plan
 
 *Trello board*
 *Checklists for each feature should have at least 5 items*
