@@ -2,10 +2,14 @@ require_relative 'dispatch'
 
 require 'colorize'
 require 'artii'
+require 'tty-cursor'
 
 begin
     a = Artii::Base.new
-   puts a.asciify('purrito').magenta
+    puts a.asciify('purrito').magenta
+
+    cursor = TTY::Cursor
+
    puts 'What would you like to do?'.bold,
    '1 - Check In 🌶️',
    '2 - Check Out',
@@ -18,5 +22,5 @@ begin
    dispatch cmd
 
 rescue => exception
-    
+
 end until ['quit', 'q', 'exit', '6'].include? cmd
