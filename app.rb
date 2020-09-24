@@ -13,14 +13,16 @@ begin
    puts 'What would you like to do?'.bold,
    '1 - Check In 🌶️',
    '2 - Check Out',
-   '3 - View All Cats',
-   '4 - View Single Cat',
-   '5 - Show Meals',
-   '6 - Quit'
+   '3 - Create New Cat',
+   '4 - View All Cats',
+   '5 - View Current Guests',
+   '6 - View Single Cat',
+   '7 - Show Meals',
+   '8 - Quit'
 
    cmd = gets.chomp.strip
    dispatch cmd
 
 rescue => exception
 
-end until ['quit', 'q', 'exit', '6'].include? cmd
+end until ['quit', 'q', 'exit', '8'].include? cmd

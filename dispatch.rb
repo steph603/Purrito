@@ -9,18 +9,25 @@ def dispatch(cmd)
         puts 'Check out a kitty'
 
     elsif ['3'].include? cmd
-        ::Controller.index
+        puts 'Create a new kitty'
 
     elsif ['4'].include? cmd
-        puts '4 - View Single Cat'
+        puts 'View all cats'
 
     elsif ['5'].include? cmd
-        puts '5 - Show Meals'
+        ::Controller.index
+
+    elsif ['6'].include? cmd
+        puts '6 - View Single Cat'
+
+    elsif ['7'].include? cmd
+        puts '7 - Show Meals'
 
     else
-        unless ['quit', 'q', 'exit', '6'].include? cmd
+        unless ['quit', 'q', 'exit', '8'].include? cmd
             puts 'Invalid Selection - Please Try Again'.red
-        end
     end
-
+    
+    end
+ puts 'Goodbye! 🐱'
 end
