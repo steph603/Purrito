@@ -3,16 +3,17 @@ require_relative 'models/cats'
 
 def dispatch(cmd)
     if ['1'].include? cmd
-        puts 'Check in a kitty!'
+        ::Controller.check_in_out(cmd)
 
     elsif ['2'].include? cmd
-        puts 'Check out a kitty'
+        ::Controller.check_in_out(cmd)
 
     elsif ['3'].include? cmd
         puts 'Create a new kitty'
 
     elsif ['4'].include? cmd
         puts 'View all cats'
+        ::Controller.index
 
     elsif ['5'].include? cmd
         ::Controller.index
@@ -29,5 +30,5 @@ def dispatch(cmd)
     end
     
     end
- puts 'Goodbye! 🐱'
+#  puts 'Goodbye! 🐱'
 end
