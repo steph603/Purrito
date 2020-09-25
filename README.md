@@ -25,16 +25,23 @@ A quick list will be generated for all cats currently checked in to boarding wit
 
 #### Features
 
-- Check-in new cat
+- Check-in a cat to boarding
 - Check-out cat in boarding
 - Display individual cats
 - Display all checked-in cats and their care requirements
+- Display all cats regardless of whether checked in or not
 
 
 *Describe each features with 100 words, must demonstrate understanding of loops, variables/scope & error handling*
 
 
 #### Outline of user Interaction and Experience
+
+When the application is started, the user will be presented with a numbered menu and a prompt to enter their desired action by entering the appropriate number.
+
+***Screenshot***
+
+
 
 #### Flow Diagram
 

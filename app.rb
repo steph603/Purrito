@@ -3,14 +3,13 @@ require_relative 'dispatch'
 require 'colorize'
 require 'artii'
 require 'tty-cursor'
+puts "\n\nWelcome to...".magenta
+a = Artii::Base.new
+puts a.asciify("purrito").magenta
+cursor = TTY::Cursor
 
 begin
-    a = Artii::Base.new
-    puts a.asciify('purrito').magenta
-
-    cursor = TTY::Cursor
-
-   puts 'What would you like to do?'.bold,
+   puts "\n\nWhat would you like to do?\n".bold,
    '1 - Check In 🌶️',
    '2 - Check Out',
    '3 - Create New Cat',

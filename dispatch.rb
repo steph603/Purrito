@@ -1,5 +1,6 @@
-require_relative 'controllers/controller'
 require_relative 'models/cats'
+require_relative 'controllers/controller'
+
 
 def dispatch(cmd)
     if ['1'].include? cmd
@@ -9,7 +10,8 @@ def dispatch(cmd)
         ::Controller.check_in_out(cmd)
 
     elsif ['3'].include? cmd
-        puts 'Create a new kitty'
+        puts "Hello, this is dispatch!".blue
+        ::Controller.new_cat
 
     elsif ['4'].include? cmd
         puts 'View all cats'
