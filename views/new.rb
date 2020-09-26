@@ -7,17 +7,17 @@ module Views
             id_counter = 4
             id_counter += 1
             puts 'Please enter the following'.bold
-            puts 'Name:'
+            puts 'Name:'.bold
             name = gets.chomp.capitalize
-            puts 'Breed:'
+            puts 'Breed:'.bold
             breed = gets.chomp
-            puts 'Colour:'
+            puts 'Colour:'.bold
             colour = gets.chomp.capitalize
-            puts "What does #{name} eat in the morning?"
+            puts "What does #{name} eat in the morning?".bold
             am = gets.chomp.capitalize
-            puts "What does #{name} eat in the evening?"
+            puts "What does #{name} eat in the evening?".bold
             pm = gets.chomp.capitalize
-            puts "Spiciness rating (0-3)"
+            puts "Spiciness level (0-3)".bold
             spicy = gets.chomp.to_i 
 
             puts name, breed, colour, am, pm

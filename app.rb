@@ -3,10 +3,20 @@ require_relative 'dispatch'
 require 'colorize'
 require 'artii'
 require 'tty-cursor'
+require 'tty-table'
 puts "\n\nWelcome to...".magenta
 a = Artii::Base.new
 puts a.asciify("purrito").magenta
 cursor = TTY::Cursor
+
+
+table = TTY::Table.new(header: ['Squirrel', '🌶️ 🌶️ 🌶️'])
+table << ['AM - Wet Noodles', 'PM - Wet Noodles'] << ['c3', 'c4'] << ['🌶️', 'Something']
+
+
+puts table.render(:unicode, padding: [1,1,0,1])
+
+
 
 begin
    puts "\n\nWhat would you like to do?\n".bold,
