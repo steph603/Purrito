@@ -21,7 +21,7 @@ def dispatch(cmd)
         ::Controller.index
 
     elsif ['6'].include? cmd
-        puts '6 - View Single Cat'
+        ::Controller.displays
 
     elsif ['7'].include? cmd
         puts '7 - Show Meals'

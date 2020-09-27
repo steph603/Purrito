@@ -2,6 +2,7 @@ require_relative '../models/cats'
 require_relative '../views/index'
 require_relative '../views/check'
 require_relative '../views/new'
+require_relative '../views/displaycat'
 
 module Controller
  
@@ -22,5 +23,11 @@ module Controller
         ::Views::Guests::create(all_cats: all_cats)
     end
 
-    module_function :index, :check_in_out, :new_cat
+    def displays
+        all_cats = Guests.all
+        puts "This is the controller!"
+        ::Views::Guests::show_cat(all_cats: all_cats)
+    end
+
+    module_function :index, :check_in_out, :new_cat, :displays
 end
