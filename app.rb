@@ -1,35 +1,31 @@
 require_relative 'dispatch'
-
 require 'colorize'
 require 'artii'
 require 'tty-table'
 require 'tty-prompt'
 
-# prompt = TTY::Prompt.new(symbols: {marker: "🌶️"})
-
-# choices = %w('Check In' 'Check Out' 'Create New Cat' 'View All Cats' 'View Current Guests' 'View Single Cat' 'Show Meals' 'Quit')
-# prompt.select("Select choices", choices, cycle: true)
 
 puts "\n\nWelcome to...".magenta
 a = Artii::Base.new
 puts a.asciify("purrito").magenta
 
 begin
-   puts "\n\nWhat would you like to do?\n".bold,
-   '1 - Check In 🌶️',
-   '2 - Check Out',
-   '3 - Create New Cat',
-   '4 - View All Cats',
-   '5 - View Current Guests',
-   '6 - View Single Cat',
-   '7 - Show Meals',
-   '8 - Quit'
 
-   cmd = gets.chomp.strip
-   dispatch cmd
+ choices = [
+      { name: " View All Cats", value: 5},     
+      { name: " View Checked In Cats", value: 4},
+      { name: " Check In", value: 1},
+      { name: " Check Out", value: 2 },
+      { name: " Create New Cat", value: 3},
+      { name: " View One Cat", value: 6},
+      { name: " Show Meals", value: 7 },
+      { name: " Quit", value: 8 }
+    ]
 
-rescue => exception
+    prompt = TTY::Prompt.new(symbols: {marker: "🌶️"}).select("\n\nWhat would you like to do?\n".bold, choices, cycle: true, per_page: 8, active_color: :magenta)
 
-end until ['quit', 'q', 'exit', '8'].include? cmd
+   dispatch prompt
+
+end until prompt == 8
 
 # CHECK RECIPES APP FOR FILE STRUCTURE 

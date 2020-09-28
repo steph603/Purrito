@@ -1,34 +1,27 @@
 require_relative 'models/cats'
 require_relative 'controllers/controller'
 
-
 def dispatch(cmd)
-    if ['1'].include? cmd
+    if cmd == 1
         ::Controller.check_in_out(cmd)
 
-    elsif ['2'].include? cmd
+    elsif cmd == 2
         ::Controller.check_in_out(cmd)
 
-    elsif ['3'].include? cmd
-        puts "Hello, this is dispatch!".blue
+    elsif cmd == 3
         ::Controller.new_cat
 
-    elsif ['4'].include? cmd
-        puts 'View all cats'
-        ::Controller.index
+    elsif cmd == 4
+        ::Controller.index(cmd)
 
-    elsif ['5'].include? cmd
-        ::Controller.index
+    elsif cmd == 5
+        ::Controller.index(cmd)
 
-    elsif ['6'].include? cmd
+    elsif cmd == 6
         ::Controller.displays
 
-    elsif ['7'].include? cmd
-        puts '7 - Show Meals'
+    elsif cmd == 7
+        ::Controller.show_meals
 
-    else
-        unless ['quit', 'q', 'exit', '8'].include? cmd
-            puts 'Invalid Selection - Please Try Again'.red
-    end
     end
 end

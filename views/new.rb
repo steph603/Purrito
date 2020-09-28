@@ -3,7 +3,11 @@ require 'colorize'
 module Views
     module Guests
         def self.create(all_cats:)
-        id_counter = 4
+            # I'm happy that this counter will suffice for this app - 
+        id_counter = all_cats.length
+            # cats will never be deleted from the app as they may be considered components of medical records
+            # and be required to be kept.  If entries were able to be deleted, unique identifiers would need to be created
+            # or rather than deleting cats, set them to 'inactive' and exclude them from any activity. 
         id_counter += 1
             puts 'Please enter the following'.bold
             puts 'Name:'.bold
@@ -19,10 +23,7 @@ module Views
             puts "Spiciness level (0-3)".bold
             spicy = gets.chomp.to_i 
 
-            puts all_cats
-           puts id_counter
            all_cats << {checked_in: false, id: id_counter, name: name, breed: breed, colour: colour, AM: [] << am, PM: [] << pm, spicy: spicy}
-           puts all_cats
 
             File.open('cats.yml', 'w') {|file| file.write(all_cats.to_yaml)}
 

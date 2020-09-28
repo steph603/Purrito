@@ -50,3 +50,13 @@
   :PM:
   - Kitten Wet
   :spicy: 0
+- :checked_in: false
+  :id: 6
+  :name: Fluffybutt
+  :breed: Ragdoll
+  :colour: Seal point
+  :AM:
+  - Adult dry
+  :PM:
+  - Adult wet
+  :spicy: 3
