@@ -3,13 +3,12 @@ require 'tty-table'
 
 module Views
     module Guests
-        def show_cat(all_cats:)
+        def self.show_cat(all_cats:)
 
             puts "Please enter cat's name:"
             search = gets.chomp.strip.capitalize
             results = all_cats.select{|cat| cat[:name].include? search}
             
-
             if results.length == 0
                 puts "\nNo results found".red.bold
 
@@ -36,6 +35,6 @@ module Views
 
             end
         end
-        module_function :show_cat
+
     end
 end

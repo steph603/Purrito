@@ -2,10 +2,14 @@ require_relative 'dispatch'
 
 require 'colorize'
 require 'artii'
-require 'tty-cursor'
 require 'tty-table'
+require 'tty-prompt'
 
-puts "Here is a cat!"
+# prompt = TTY::Prompt.new(symbols: {marker: "🌶️"})
+
+# choices = %w('Check In' 'Check Out' 'Create New Cat' 'View All Cats' 'View Current Guests' 'View Single Cat' 'Show Meals' 'Quit')
+# prompt.select("Select choices", choices, cycle: true)
+
 puts "\n\nWelcome to...".magenta
 a = Artii::Base.new
 puts a.asciify("purrito").magenta
@@ -27,3 +31,5 @@ begin
 rescue => exception
 
 end until ['quit', 'q', 'exit', '8'].include? cmd
+
+# CHECK RECIPES APP FOR FILE STRUCTURE 

@@ -30,7 +30,5 @@ def dispatch(cmd)
         unless ['quit', 'q', 'exit', '8'].include? cmd
             puts 'Invalid Selection - Please Try Again'.red
     end
-    
     end
-#  puts 'Goodbye! 🐱'
 end

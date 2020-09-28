@@ -1,10 +1,9 @@
 require 'tty-table'
 module Views
     module Guests
-        def index(all_cats:)
-            cats_map = all_cats.select {|cat| cat[:checked_in]}
-            puts cats_map
+        def self.index(all_cats:)
+            current_guests = all_cats.select {|cat| cat[:checked_in]}
+            puts current_guests
         end
-        module_function :index
     end
 end

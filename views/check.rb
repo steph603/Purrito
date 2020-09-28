@@ -1,9 +1,8 @@
 module Views
     module Guests
-        def check(inout:, all_cats:)
+        def self.check(inout:, all_cats:)
             puts "Which cat would you like to CHECK #{inout.upcase}? (Enter ID)".green
             cat_id = gets.chomp.to_i
-            # Need to implement below into MVC 
             cat = all_cats.select{|cat| cat[:id] == cat_id}
 
             if inout == 'in' && cat[0][:checked_in]
@@ -18,6 +17,5 @@ module Views
                 puts "#{cat[0][:name]} is now checked out!"
             end
         end
-        module_function :check
     end
 end

@@ -5,10 +5,10 @@
 
 #### Software Development Plan
 
-My application, Purrito provides a way to manage and care for cats in a boarding facility.  
+Purrito provides a way to manage and care for cats in a boarding facility.  
 
 When caring for cats in a boarding facility it can be difficult to keep track of what each of the cats requirements are.  
-Check-in and Check-out dates are managed through an appointment or calendar type booking system, but the individual care requirements for each cat are usually handwritten and kept on clipboards for each cat.  
+Check-in and Check-out dates are managed through an appointment or calendar type booking system, but the individual care requirements for each cat are usually handwritten and kept on clipboards or a whiteboard for each cat.  
 Perhaps you need to prepare meals for 40 different cats who all require different food!  You either need to write a list, or bring the clipboards to the kitchen with you to keep track of who needs what.
 
 The aim of Purrito is to provide a quick overview of which cats are currently in boarding and what their requirements are for both morning and evening mealtimes. It will reduce time wasted preparing lists or clipboards for boarding cats and reduce paper waste.
