@@ -1,7 +1,7 @@
 module Views
     module Guests
         def self.check(inout:, all_cats:)
-            puts "Which cat would you like to CHECK #{inout.upcase}? (Enter ID)".green
+            puts "Which cat would you like to CHECK #{inout.upcase}? (Enter ID)".bold
             cat_id = gets.chomp.to_i
             cat = all_cats.select{|cat| cat[:id] == cat_id}
 

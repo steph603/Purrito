@@ -8,7 +8,7 @@
   - Senior Wet
   :PM:
   - Senior Wet
-  :spicy: 0
+  :spicy: ''
 - :checked_in: true
   :id: 2
   :name: Nixie
@@ -19,7 +19,7 @@
   :PM:
   - Ziwi Lamb Wet
   - Zylkene 112mg
-  :spicy: 1
+  :spicy: "\U0001F336️ "
 - :checked_in: false
   :id: 3
   :name: Poquito
@@ -29,7 +29,7 @@
   - Dry
   :PM:
   - Proudi
-  :spicy: 0
+  :spicy: ''
 - :checked_in: false
   :id: 4
   :name: Dutchie
@@ -39,7 +39,7 @@
   - Dry
   :PM:
   - Proudi
-  :spicy: 0
+  :spicy: "\U0001F336️ \U0001F336️ "
 - :checked_in: true
   :id: 5
   :name: Squirrel
@@ -49,7 +49,7 @@
   - Kitten Dry
   :PM:
   - Kitten Wet
-  :spicy: 0
+  :spicy: ''
 - :checked_in: false
   :id: 6
   :name: Fluffybutt
@@ -59,4 +59,34 @@
   - Adult dry
   :PM:
   - Adult wet
-  :spicy: 3
+  :spicy: "\U0001F336️ \U0001F336️ \U0001F336️ "
+- :checked_in: false
+  :id: 7
+  :name: Pickle
+  :breed: Abyssinian
+  :colour: Red
+  :AM:
+  - Dental
+  :PM:
+  - Dental
+  :spicy: ''
+- :checked_in: false
+  :id: 8
+  :name: Meowser
+  :breed: DMH
+  :colour: White
+  :AM:
+  - Dry
+  :PM:
+  - Dry
+  :spicy: "\U0001F336️ \U0001F336️ "
+- :checked_in: false
+  :id: 9
+  :name: Bungholio
+  :breed: lykoi
+  :colour: Grey/black
+  :AM:
+  - Mousies
+  :PM:
+  - Birdsies
+  :spicy: "\U0001F336️ \U0001F336️ \U0001F336️ "

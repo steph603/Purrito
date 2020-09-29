@@ -12,10 +12,10 @@ When caring for cats in a boarding facility it can be difficult to keep track of
 Typically, Check-in and Check-out dates are managed through an appointment or calendar type booking system, but the individual care requirements for each cat are usually handwritten and kept on clipboards or a whiteboard for each cat.  
 Perhaps you need to prepare meals for 40 different cats who all require different food!  You either need to write a list, or bring the clipboards to the kitchen with you to keep track of who needs what.
 
-The **purpose** of Purrito is to provide a quick overview of which cats are currently in boarding and what their requirements are for both morning and evening mealtimes. It will reduce time wasted preparing lists or clipboards for boarding cats and reduce paper waste.
+The **purpose** of Purrito is to provide a quick overview of which cats are currently in boarding and what their requirements are for both morning and evening mealtimes. It will reduce time wasted preparing lists or clipboards for boarding cats and work towards a paperless facility.
 
-The target audience is animal attendants caring for cats in a boarding facility.  
-However, the app could easily be adapted to care for other animals, or expanded to other audiences - to manage vehicles that require servicing, preferences of hotel guests, etc.
+The **target audience** is animal attendants caring for cats in a boarding facility.  
+However, the app could easily be adapted to care for other animals, or expanded to other audiences - to manage vehicles that require servicing, children attending daycare, etc.
 
 
 Navigation within Purrito needs to be simple to suit the audience.  
@@ -43,14 +43,14 @@ A quick list will be generated for all cats currently checked in to boarding wit
 *Describe each features with 100 words, must demonstrate understanding of loops, variables/scope & error handling*
 
 
-#### Outline of user Interaction and Experience
+#### Outline of User Interaction and Experience
 
 When the application is started, the user is presented with a menu and a prompt to navigate the menu with up or down arrows.
 The active menu item is identified with magenta colouring and a chilli marker.  
 
-***Screenshot***
 
 
+![Purrito Starting Screen](/img/startup.png)
 
 
 #### Flow Diagram

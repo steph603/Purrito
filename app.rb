@@ -4,13 +4,11 @@ require 'artii'
 require 'tty-table'
 require 'tty-prompt'
 
-
 puts "\n\nWelcome to...".magenta
 a = Artii::Base.new
 puts a.asciify("purrito").magenta
 
 begin
-
  choices = [
       { name: " View All Cats", value: 5},     
       { name: " View Checked In Cats", value: 4},
@@ -22,10 +20,7 @@ begin
       { name: " Quit", value: 8 }
     ]
 
-    prompt = TTY::Prompt.new(symbols: {marker: "🌶️"}).select("\n\nWhat would you like to do?\n".bold, choices, cycle: true, per_page: 8, active_color: :magenta)
+    prompt = TTY::Prompt.new(symbols: {marker: "🌶️ "}).select("\n\nWhat would you like to do?\n".bold, choices, cycle: true, per_page: 8, active_color: :magenta)
 
    dispatch prompt
-
 end until prompt == 8
-
-# CHECK RECIPES APP FOR FILE STRUCTURE 

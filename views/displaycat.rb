@@ -6,6 +6,7 @@ module Views
         def self.show_cat(all_cats:)
 
             puts "Please enter cat's name:"
+            
             search = gets.chomp.strip.capitalize
             results = all_cats.select{|cat| cat[:name].include? search}
             
@@ -13,9 +14,7 @@ module Views
                 puts "\nNo results found".red.bold
 
             elsif results.length == 1
-                puts "\nYay!  I found your cat!".green.bold
                 results = results[0]
-                p results[:name]
                 cat_card = TTY::Table.new(header: [results[:name], results[:colour], results[:breed]]) 
                 cat_card << [results[:am], results[:pm], results[:spicy]]
                 puts cat_card.render(:unicode, padding: [1,1,1,1])
@@ -27,11 +26,12 @@ module Views
                 results.each {|result| id_table << [result[:id], result[:name], result[:colour], result[:breed]]}
                 puts id_table.render(:unicode, padding: [1,1,1,1])
 
-                puts 'Please enter the ID number of the cat you need.'
+            puts 'Please enter the ID number of the cat you need.'
 
             id = gets.chomp.strip.to_i
             result = results.select{|result| [result[:id]].include? id}
-            p result
+puts "YOU NEED TO MAKE A TABLE".red.bold
+            puts result
 
             end
         end
