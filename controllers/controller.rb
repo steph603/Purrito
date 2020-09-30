@@ -4,14 +4,18 @@ require_relative '../views/check'
 require_relative '../views/new'
 require_relative '../views/displaycat'
 require_relative '../views/meals'
-require_relative '../views/edit'
 
 module Controller
  
     # Directs to show either all cats, or all checked in cats
     def self.index(which)
         all_cats = Guests.all
-        ::Views::Guests::index(which: which, all_cats: all_cats)
+            if which == 4
+                cats = all_cats.select {|cat| cat[:checked_in]}  
+            elsif which == 5
+                cats = all_cats
+            end
+        ::Views::Guests::index(cats: cats)
     end 
 
     # Shows prompts to switches checking in/out and processes cat accordingly
@@ -35,7 +39,7 @@ module Controller
     end
 
     def self.show_meals
-        all_cats = Guests.all
-        ::Views::Guests::show_meals
+        checked_cats = Guests.all.select {|cat| cat[:checked_in]}
+        ::Views::Guests::show_meals(checked_cats: checked_cats)
     end
 end

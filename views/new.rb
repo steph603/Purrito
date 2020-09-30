@@ -16,7 +16,7 @@ module Views
             def self.get_info(msg)   
                 prompt = TTY::Prompt.new(active_color: :magenta) 
                     prompt.ask(msg) do |q|
-                    q.validate(/\D{2,}/)
+                    q.validate(/\D{2,}/, "Must contain two or more letters.  Please try again.")
                 end
             end
 
@@ -28,9 +28,11 @@ module Views
             pm = get_info("What does #{name} eat in the evening?".bold)
             spicy = prompt.ask("What is #{name}\'s spicy level? (0-3)".bold){|q| q.in("0-3")}
 
-           all_cats << {checked_in: false, id: id_counter, name: name, breed: breed, colour: colour, AM: [] << am, PM: [] << pm, spicy: ("🌶️ " * spicy.to_i)}
+           all_cats << {checked_in: false, id: id_counter, name: name.capitalize, breed: breed.capitalize, colour: colour.capitalize, AM: [] << am.capitalize, PM: [] << pm.capitalize, spicy: ("🌶️ " * spicy.to_i)}
+
 
             File.open('cats.yml', 'w') {|file| file.write(all_cats.to_yaml)}
+            puts "\n#{name.capitalize} has been successfully added!  Their ID is ##{id_counter}".magenta
 
         end
     end
