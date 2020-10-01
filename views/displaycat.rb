@@ -4,7 +4,7 @@ require 'tty-table'
 module Views
     module Guests
         def self.show_cat(cat:)
-            puts cat
+            id_card(cat)
         end
 
     end
