@@ -3,14 +3,14 @@ require 'colorize'
 require 'artii'
 require 'tty-table'
 require 'tty-prompt'
-require 'ruby2d'
+# require 'ruby2d'
 
 puts "\n\nWelcome to...".magenta
 a = Artii::Base.new
 puts a.asciify("purrito").magenta
 
-purr = Sound.new('purr.mp3')
-purr.play
+# purr = Sound.new('purr.mp3')
+# purr.play
 
 begin
  choices = [
