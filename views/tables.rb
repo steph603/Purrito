@@ -1,6 +1,7 @@
 module Views
     module Guests
         
+        # Table display for individual cat
         def self.id_card(cat)
             cat = cat[0]
             id_card = TTY::Table.new(header: ["##{cat[:id]} - #{cat[:name]}    #{cat[:spicy]}".bold.magenta])
@@ -10,6 +11,7 @@ module Views
             puts id_card.render(:unicode, padding: [1,1,1,1])
         end
 
+        # Table display for meals at a given time of day (prompt = time)
         def self.meals(guests, prompt)
             guests = guests[:checked_cats]
             meals_table = TTY::Table.new(header: ['Name'.bold.magenta, 'Meal'.bold.magenta])
@@ -17,16 +19,14 @@ module Views
             puts meals_table.render(:unicode, padding: [1,1,1,1])
         end
 
+        # Table display for cats (either checked in only or all)
         def self.cats_table(cats)
-            
             table = TTY::Table.new(header: ['ID', 'Spicy',  'Name', 'Colour', 'Breed', 'Morning Meal', 'Evening Meal', 'Checked In?'] )
             cats.each {|cat| 
                 cat[:checked_in] ? (inout = 'YES'.green) : (inout = '')
                 table << [ cat[:id], cat[:spicy], cat[:name], cat[:colour], cat[:breed], cat[:AM][0].to_s, cat[:PM][0].to_s, inout]
             }
             puts table.render(:unicode, padding: [1,1,1,1])
-
         end
-
     end
 end

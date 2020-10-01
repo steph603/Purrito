@@ -81,8 +81,8 @@
   :spicy: "\U0001F336️ \U0001F336️ "
 - :checked_in: false
   :id: 9
-  :name: Bungholio
-  :breed: lykoi
+  :name: Bungho
+  :breed: Lykoi
   :colour: Grey/black
   :AM:
   - Mousies
@@ -95,15 +95,25 @@
   :breed: Sphynx
   :colour: Torti
   :AM:
-  - Dry
+  - Faces
   :PM:
-  - Wet
+  - Toes
   :spicy: "\U0001F336️ \U0001F336️ \U0001F336️ "
 - :checked_in: true
   :id: 11
   :name: Kohl
   :breed: Dsh
   :colour: Black
+  :AM:
+  - Dental
+  :PM:
+  - Dental
+  :spicy: ''
+- :checked_in: false
+  :id: 12
+  :name: Peach
+  :breed: Dsh
+  :colour: Torti
   :AM:
   - Dental
   :PM:

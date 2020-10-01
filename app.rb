@@ -9,8 +9,7 @@ puts "\n\nWelcome to...".magenta
 a = Artii::Base.new
 puts a.asciify("purrito").magenta
 
-purr = Sound.new('purr.mp3')
-purr.play
+Sound.new('purr.mp3').play
 
 begin
  choices = [
@@ -25,6 +24,5 @@ begin
     ]
 
     prompt = TTY::Prompt.new(symbols: {marker: "🌶️ "}).select("\n\nWhat would you like to do?\n".bold, choices, cycle: true, per_page: 8, active_color: :magenta)
-
-   dispatch prompt
+    dispatch prompt
 end until prompt == 8

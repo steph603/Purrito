@@ -42,7 +42,7 @@ module Controller
                 puts id_table.render(:unicode, padding: [1,1,1,1])
                 prompt = TTY::Prompt.new(active_color: :magenta)
                     .ask('Which is the correct ID#?'.bold){|q|
-                        q.in("0-99999")
+                        q.in("1-99999", "Please enter a number between 1 and 99999")
                     }
                 cat = all_cats.select{|cat|
                     cat[:id] == prompt.to_i
@@ -51,7 +51,7 @@ module Controller
         end
     end
 
-    # Directs to show either all cats, or all checked in cats
+    # Directs to show either all cats, or all checked in cats (4/5 are menu options determining all or checked in only)
     def self.index(which)
         all_cats = Guests.all
         if which == 4
@@ -61,11 +61,10 @@ module Controller
         elsif which == 5
             cats = all_cats
         end
-
         ::Views::Guests::index(cats: cats)
     end 
 
-    # Shows prompts to switches checking in/out and processes cat accordingly
+    # Sends user to search for correct cat, then sends that cat to be processed correctly
     def self.check_in_out(inout)
         all_cats = Guests.all
         cat = search()
@@ -82,11 +81,13 @@ module Controller
         ::Views::Guests::create(all_cats: all_cats)
     end
 
+    # Sends user to search for a cat, then sends cat to show_cat to be displayed in table
     def self.displays
         cat = search()
         ::Views::Guests::show_cat(cat: cat)
     end
 
+    # Sends all checked in cats to meals to be displayed in table
     def self.show_meals
         checked_cats = Guests.all.select {|cat| 
             cat[:checked_in]
