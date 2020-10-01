@@ -27,13 +27,9 @@ module Views
             am = get_info("What does #{name} eat in the morning?".bold)
             pm = get_info("What does #{name} eat in the evening?".bold)
             spicy = prompt.ask("What is #{name}\'s spicy level? (0-3)".bold){|q| q.in("0-3")}
-
            all_cats << {checked_in: false, id: id_counter, name: name.capitalize, breed: breed.capitalize, colour: colour.capitalize, AM: [] << am.capitalize, PM: [] << pm.capitalize, spicy: ("🌶️ " * spicy.to_i)}
-
-
             File.open('cats.yml', 'w') {|file| file.write(all_cats.to_yaml)}
             puts "\n#{name.capitalize} has been successfully added!  Their ID is ##{id_counter}".magenta
-
         end
     end
 end

@@ -8,10 +8,8 @@ module Views
                    ]    
                     prompt = TTY::Prompt.new(symbols: {marker: "🌶️ "}).select("\n\nIs it morning or evening??\n".bold, choices, cycle: true, per_page: 2, active_color: :magenta)
                     prompt == :AM ? (time = 'morning') : (time = 'evening')
-
-                puts "\nGood #{time}!  Here are the meals to prepare:".magenta
-                checked_cats[:checked_cats].each {|cat| puts cat[:name], cat[prompt]}
-
+                puts " \nGood #{time.capitalize}!  Here are the meals to prepare:\n".magenta.bold
+                meals(checked_cats, prompt)
         end
     end
 end

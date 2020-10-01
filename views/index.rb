@@ -1,8 +1,9 @@
-require 'tty-table'
+require_relative 'tables'
+
 module Views
     module Guests
         def self.index(cats:)
-            puts cats
+            cats_table(cats)
         end
     end
 end

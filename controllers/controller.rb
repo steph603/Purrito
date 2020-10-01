@@ -46,6 +46,7 @@ module Controller
             elsif which == 5
                 cats = all_cats
             end
+            
         ::Views::Guests::index(cats: cats)
     end 
 
