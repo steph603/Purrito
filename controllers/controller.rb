@@ -8,11 +8,21 @@ require_relative '../views/meals'
 module Controller
     
 
+    def self.get_info(msg)   
+        prompt = TTY::Prompt.new(active_color: :magenta) 
+            prompt.ask(msg) do |q|
+            q.validate(/\D{2,}/, "Must contain two or more letters.  Please try again.")
+        end
+    end
+
+
     def self.search
 #Allows user to search for a cat by ID number or by name
         all_cats = Guests.all
 
-        prompt = TTY::Prompt.new(active_color: :magenta).ask('Please enter the cat\'s name, or ID# if you know it'.bold)
+        prompt = TTY::Prompt.new(active_color: :magenta).ask('Please enter the cat\'s name, or ID# if you know it'.bold)do |q|
+            q.validate(/\D{1,}/, "Response must contain at least one letter or at least one number.  Please try again.")
+        end
 # If user knows the ID number, the cat is returned immediately
         if prompt == prompt.to_i.to_s
              cat = all_cats.select{|cat| cat[:id] == prompt.to_i}
@@ -20,9 +30,8 @@ module Controller
             else
                 results = all_cats.select{|cat| cat[:name].include? prompt.chomp.strip.capitalize}
 # If the user would like to search by name, follow the below prompts
-                if results.length == 0
-                    puts "\nNo results found".red.bold
-                elsif results.length == 1
+                # if results.length == 0
+                if results.length == 1
                     cat = results
                 elsif results.length > 1
                     puts 'Here are the results!'
@@ -46,7 +55,7 @@ module Controller
             elsif which == 5
                 cats = all_cats
             end
-            
+
         ::Views::Guests::index(cats: cats)
     end 
 
