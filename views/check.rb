@@ -12,6 +12,7 @@ module Views
                 cat[0][:checked_in] = false
                 puts "#{cat[0][:name]} is now checked out!"
             end
+
         end
     end
 end

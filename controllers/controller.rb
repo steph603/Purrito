@@ -51,9 +51,11 @@ module Controller
 
 # Shows prompts to switches checking in/out and processes cat accordingly
     def self.check_in_out(inout)
+        all_cats = Guests.all
         cat = search()
         inout == 1 ? (inout = 'in') : (inout = 'out')
         ::Views::Guests::check(inout: inout, cat: cat)
+        File.open('cats.yml', 'w') {|file| file.write(all_cats.to_yaml)}
     end
 
 # Shows prompts to create a new cat

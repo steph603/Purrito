@@ -6,8 +6,7 @@ module Views
                      { name: " Morning", value: :AM},     
                      { name: " Evening", value: :PM}
                    ]    
-                   prompt = TTY::Prompt.new(symbols: {marker: "🌶️ "}).select("\n\nIs it morning or evening??\n".bold, choices, cycle: true, per_page: 2, active_color: :magenta)
-
+                    prompt = TTY::Prompt.new(symbols: {marker: "🌶️ "}).select("\n\nIs it morning or evening??\n".bold, choices, cycle: true, per_page: 2, active_color: :magenta)
                     prompt == :AM ? (time = 'morning') : (time = 'evening')
 
                 puts "\nGood #{time}!  Here are the meals to prepare:".magenta
