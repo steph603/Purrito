@@ -11,7 +11,7 @@ module Controller
         prompt = TTY::Prompt.new(active_color: :magenta) 
         prompt.ask(msg) do |q|
             q.validate(/\D{2,}/, "Must contain two or more letters.  Please try again.")
-        end
+        end   
     end
 
     def self.search
