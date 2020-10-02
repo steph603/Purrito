@@ -22,6 +22,5 @@ def dispatch(cmd)
 
     elsif cmd == 7
         ::Controller.show_meals
-
     end
 end

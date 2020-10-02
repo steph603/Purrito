@@ -14,10 +14,18 @@ module Views
             
             # Validation - ensure user enters two or more letters
             def self.get_info(msg)   
+                validationMessage = "Must contain between 2 and 10 letters.  Please try again."
                 prompt = TTY::Prompt.new(active_color: :magenta) 
-                    prompt.ask(msg) do |q|
-                    q.validate(/\D{2,}/, "Must contain two or more letters.  Please try again.")
+                answer = prompt.ask(msg) do |q|
+                    q.validate(/\D{2,}/, validationMessage)
                 end
+                # Regex matches strings 2-10. if I have 12 letters it would match twice.
+                # This statement catches it.
+                if answer.length > 10
+                    puts validationMessage
+                    answer = self.get_info(msg)
+                end
+                return answer
             end
 
             #Prompts to request data from user

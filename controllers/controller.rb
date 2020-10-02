@@ -7,6 +7,7 @@ require_relative '../views/meals'
 
 module Controller
 
+
     def self.get_info(msg)   
         prompt = TTY::Prompt.new(active_color: :magenta) 
         prompt.ask(msg) do |q|

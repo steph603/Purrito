@@ -9,7 +9,7 @@ puts "\n\nWelcome to...".magenta
 a = Artii::Base.new
 puts a.asciify("purrito").magenta
 
-Sound.new('purr.mp3').play
+Sound.new('purr.mp3').play rescue  puts '' 
 
 begin
  choices = [
