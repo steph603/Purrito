@@ -17,6 +17,9 @@ module Views
             meals_table = TTY::Table.new(header: ['Name'.bold.magenta, 'Meal'.bold.magenta])
             guests.each {|guest| meals_table << ["#{guest[:name]}  #{guest[:spicy]}", guest[prompt][0].to_s]}
             puts meals_table.render(:unicode, padding: [1,1,1,1])
+            if guests.length == 0
+                puts "No meals to display!"
+            end
         end
 
         # Table display for cats (either checked in only or all)
@@ -27,6 +30,9 @@ module Views
                 table << [ cat[:id], cat[:spicy], cat[:name], cat[:colour], cat[:breed], cat[:AM][0].to_s, cat[:PM][0].to_s, inout]
             }
             puts table.render(:unicode, padding: [1,1,1,1])
+            if cats.length == 0 
+                puts "No cats to show!"
+            end
         end
     end
 end
