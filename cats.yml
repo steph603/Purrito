@@ -119,3 +119,13 @@
   :PM:
   - Dental
   :spicy: ''
+- :checked_in: false
+  :id: 13
+  :name: Pearl
+  :breed: Burmese
+  :colour: Lilac
+  :AM:
+  - Dry
+  :PM:
+  - Wet
+  :spicy: ''
