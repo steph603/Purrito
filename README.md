@@ -123,7 +123,8 @@ https://rubygems.org/gems/bundler
 https://www.ruby-lang.org/en/
 - Bundler 
 Visit https://rubygems.org/gems/bundler
-then `gem install bundler` 
+then `gem install bundler`.
+You may need to type `sudo gem install bundler` to install with the required permissions.
 
 
 
@@ -134,7 +135,7 @@ and download the code or, in your terminal type:
 
 `git clone https://github.com/steph603/Purrito`
 
-From the application directory, type `bundle install` to install the required Ruby Gems
+From the application directory, type `bundle install` or `sudo bundle install` to install the required Ruby Gems
 
 Then to run Purrito, type
 `purrito.sh`, or from a zsh or other shell, type `bash purrito.sh`
